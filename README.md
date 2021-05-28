@@ -1,4 +1,4 @@
-# ***Witamy w oficjalnej dokumetacji strony internetowej projektu SensoPark!***
+# ***Witamy w oficjalnej dokumetacji strony internetowej projektu ZP!***
 
 _**Szybkie uruchomienie**_
 
