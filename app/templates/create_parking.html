@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+	{% block links %}
+	<link rel="stylesheet" type="text/css" href="/static/login.css">
+	<title>Zautomatyzowane parkingi - rejestracja</title>
+	{% endblock %}
+	{% block content %}
+	<div id="login-container">
+        <h1>Zautomatyzowane parkingi</h1>
+        <hr width="112px" color="#d60d0d" style="margin-bottom: 25px;">
+        {{ wtf.quick_form(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+Witaj! {{user.username}},
+Cieszymy się, że chcesz zostać członkiem SensoPark
+Aby w pełni korzystać z naszych usług kliknij w przycisk poniżej.
+{{ url_for('auth.confirm', token=token, _external=True) }}
+Jeżeli to nie ty Tworzyłeś konto, nie odpowiadaj na tego maila.
+Jeśli nie możesz kliknąć w Przycisk, skopiuj i wklej do nowej karty ten link:
+{{ url_for('auth.confirm', token=token, _external=True) }}
+Jeśli masz jakiekolwiek pytania, kieruj je na:
+patromi123@gmail.com
+Z poważaniem,
+SensoparkTeam
+Uwaga: Nie odpowiadaj na tę wiadomość.

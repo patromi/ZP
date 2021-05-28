@@ -1,0 +1,75 @@
+{% extends "baseadmin.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+<meta charset="UTF-8">
+<title>Zautomatyzowane parkingi
+</title>
+<link rel="stylesheet" type="text/css" href="/static/global.css">
+<link rel="stylesheet" type="text/css" href="/static/admin.css">
+{% endblock %}
+{% block content %}
+<div id="rest">
+    <div>
+        <h1 style="margin-left: 20px;">Szczegółowe informacje</h1>
+        <div>
+            <form action="#" method="post">
+                <input type="hidden" name="parkingid" value="12">
+                <table>
+                    <tr>
+                        <td>ID:</td>
+                        <td>{{ parking.id }}</td>
+                        <td><input style="cursor: move; color: red;" type="text" class="query-input" disabled
+                                   value="Nieedytowalne"></td>
+                    </tr>
+                    <tr>
+                        <td>Właściciel:</td>
+                        <td><a href="/admin/manager/{{ parking.user_id }}">{{ parking.user_id }}</a></td>
+                        <td><input type="number" name="owner" class="query-input" placeholder="Nowe id"></td>
+                    </tr>
+                    <tr>
+                        <td>Adres:</td>
+                        <td>{{ parking.adress }}</td>
+                        <td><input type="text" name="adress" class="query-input" placeholder="Nowy adres"></td>
+                    </tr>
+                    <tr>
+                        <td>Razem miejsc:</td>
+                        <td>{{ parking.number_of_parkings }}</td>
+                        <td><input type="text" name="number_of_parkings"
+                                   class="query-input" placeholder="Wpisz nową liczbe miejsc"></td>
+                    </tr>
+                    <tr>
+                        <td>Lokalizacja:</td>
+                        <td>{{ parking.localisation }}</td>
+                        <td><input type="text" name="position" class="query-input" placeholder="Nowa lokalizacja"></td>
+                    </tr>
+                    <tr>
+                        <td>Nazwa:</td>
+                        <td>{{ parking.name }}</td>
+                        <td><input type="text" name="name" class="query-input" placeholder="Nowa nazwa"></td>
+                    </tr>
+                    <tr>
+                        <td>Opis:</td>
+                        <td style="max-width: 400px; word-wrap: break-word;">
+                            {{ parking.description }}
+                        </td>
+                        <td><input type="text" name="description" class="query-input" placeholder="Nowy opis"></td>
+                    </tr>
+                </table>
+                <button class="button-add" type="submit" style="margin-top: 10px;">
+                    Zastosuj zmiany
+                </button>
+            </form>
+            <a href="/admin/delete/{{ parking.id }}">
+                <button class="button-add" style="background-color: red; margin-top: 10px;">Usuń Parking
+                </button>
+
+            </a>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript" src="/static/global.js"></script>
+<script type="text/javascript" src="/static/debug.js"></script>
+{% endblock %}

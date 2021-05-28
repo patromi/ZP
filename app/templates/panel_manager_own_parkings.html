@@ -1,0 +1,66 @@
+{% extends "baseadmin.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+<meta charset="UTF-8">
+<title>Zautomatyzowane parkingi</title>
+<link rel="stylesheet" type="text/css" href="/static/global.css">
+<link rel="stylesheet" type="text/css" href="/static/admin.css">
+{% endblock %}
+{% block content %}
+</head>
+<body>
+<div id="container">
+    <div id="rest">
+        <h1 style="margin-left: 20px;">Moje parkingi</h1>
+        <div class="inside">
+            <div class="searcher">
+                <div style="display: inline-block;">
+                    <form action="#" method="post">
+                        <input type="hidden" name="from"
+                               value="/aktualnylink/zeby/potem/cofac - uzyj w przycisku cofania">
+                        <input type="text" name="query" class="query-input" placeholder="Słowo klucz">
+                    </form>
+                </div>
+                <div style="display: inline-block;">
+                    <a href="{{ url_for('manager.manager_create_parking_panel') }}">
+                        <button class="button-add">Dodaj nowy parking
+                        </button>
+
+                    </a>
+                </div>
+            </div>
+            <table id="parkinglist">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Adres</th>
+                    <th>Username</th>
+                    <th>Liczba wszystkich parkingów</th>
+                    <th>Liczba wolnych parkingów</th>
+                    <th>nr telefonu</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in parking %}
+                <tr class="tabela">
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.adress }}</td>
+                    <td>{{ i.user_id }}</td>
+                    <td>{{ i.number_of_parkings}}</td>
+
+                    <td>{{ i.number_of_free_parkings}}</td>
+                    <td>{{ i.description }}</td>
+
+
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="/static/global.js"></script>
+<script type="text/javascript" src="/static/manager.js"></script>
+<script type="text/javascript" src="/static/debug.js"></script>
+</body>
+{% endblock %}

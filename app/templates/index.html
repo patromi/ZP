@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="content">
+	<div align="center"
+		 style="padding-top: 10px; background-color: white; min-height: calc(100vh - 80px); background: url('/static/parking.png') no-repeat; background-size: 100vw auto;">
+		<div style="color: white; text-shadow: 2.6px 2.6px rgb(0 0 0 / 50%);"><h1 style="font-size: 50px;">Zautomatyzowane Parkingi -
+			autonomiczne sieci sensoryczne</h1>
+			<div style="margin-left: auto; margin-right: auto; height: 7px; width: 50vw; border-radius: 8px; background-color: white;"></div>
+			<p style="font-size: 25px;">Nasze parkingki cechują się wysoką autonomicznością, co oznacza,
+				<br>
+				że są bezobsługowe, dzięki zastosowaniu nowoczesnej infrastruktury <b>sieci sensorycznych</b></p>
+		</div>
+		<div>
+			<div style="margin-left: auto; margin-right: auto; height: 7px; width: 50vw; border-radius: 8px; background-color: white;"></div>
+			<div style="font-size: 15px; color: white; font-weight: 600;">
+				<h2>Jak zacząć korzystać z innowacyjnych rozwiązań?</h2>
+				<div style="display: inline; padding: 10px; background-color: #0063b2; border-radius: 15px;">
+					1. Załóż konto
+				</div>
+				<div style="margin-left: 20px; display: inline; padding: 10px; background-color: #0063b2; border-radius: 15px; ">
+					2. Potwierdź email
+				</div>
+				<div style="margin-left: 20px; display: inline; padding: 10px; background-color: #0063b2; border-radius: 15px; ">
+					3. Wybierz jeden z parkingów
+				</div>
+				<div style="margin-left: 20px; display: inline; padding: 10px; background-color: #0063b2; border-radius: 15px; ">
+					4. Zaznacz godzinę i zarezerwuj swoje miejsce!
+				</div>
+			</div>
+		</div>
+		<div style="height: 30px;"></div>
+		<div style="margin-left: auto; margin-right: auto; height: 7px; width: 30vw; border-radius: 8px; background-color: white;"></div>
+		<div style="height: 00px;"></div>
+		<h1 style="color: white; font-size: 40px;">Gdzie obecnie się znajdujemy</h1>
+		<iframe width="70%" height="500px" style="border:0; margin-bottom: 30px;" loading="lazy" allowfullscreen
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBdj12pdeZF4zxiTAzczEpKwppW_KPl6Nc&q=Ostrow+Wielkopolsk"></iframe>
+
+	</div>
+	<div style="color: white; text-align: center; width: 100%; background-color: #0063b2; min-height: 100vh;">
+		<div style="width: 100%; overflow: hidden;">
+			<div style="margin-left: auto; margin-right: auto; height: 50px; width: 50px; background-color:#16120f; transform: translate(0,-50%) rotate(45deg);"></div>
+		</div>
+		<div style="height: 30px;"></div><br><br><br><br><br><br><br><br><br><br>
+		<div style="margin-left: auto; margin-right: auto; height: 10px; width: 50vw; border-radius: 10px; background-color: white;"></div>
+		<h1>Dane statystyczne infrastruktury</h1>
+		<div style="display: flex; flex-wrap: wrap;">
+			<div style="display: block; text-align: center; margin-left: auto; margin-right: auto; flex: 0 0 25%; max-width: 25%;">
+				<p style="font-size: 30px">Liczba parkingów</p>
+				<span style="font-size: 35px; font-weight: 600;">{{ n_parking }} </span>
+			</div>
+			<div style="display: block; text-align: center; margin-left: auto; margin-right: auto; flex: 0 0 25%; max-width: 25%;">
+				<p style="font-size: 30px">Miasta z naszym rozwiązaniem</p>
+				<span id="parking_cites" style="font-size: 35px; font-weight: 600;">{{ n_of_c }} </span>
+
+			</div>
+			<div style="display: block; text-align: center; margin-left: auto; margin-right: auto; flex: 0 0 25%; max-width: 25%;">
+				<p style="font-size: 30px">Miejsca parkingowe</p>
+				<span id="parking-count" style="font-size: 35px; font-weight: 600;">{{ n_of_p }}</span>
+				<script type="text/javascript">
+
+
+					function animateValue(obj, start, end, duration) {
+					    let startTimestamp = null;
+					    const step = (timestamp) => {
+					      if (!startTimestamp) startTimestamp = timestamp;
+					      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+					      obj.innerHTML = Math.floor(progress * (end - start) + start);
+					      if (progress < 1) {
+					        window.requestAnimationFrame(step);
+					      }
+					    };
+					    window.requestAnimationFrame(step);
+					  }
+
+					  const obj = document.getElementById('parking-count');
+					  //function chan(){
+					      animateValue(obj, {{ n_of_p }}100, {{ n_of_p }}, 2000);
+					  //};
+
+				</script>
+			</div>
+		</div>
+		<div style="height: 30px;"></div>
+		<div style="margin-left: auto; margin-right: auto; height: 10px; width: 90vw; border-radius: 10px; background-color: white;"></div>
+		<div style="padding: 40px;">
+
+		</div>
+		<div style="height: 30px;"></div>
+	</div>
+	<div style="margin-left: auto; margin-right: auto; height: 50px; width: 50px; background-color: #0063b2; transform: translate(0,-50%) rotate(45deg);"></div>
+	<div align="center"
+		 style="background-color: white; text-align: center; min-height: 100vh; background-repeat: no-repeat; background-size: 100vw auto; background-image: url('/static/team.jpg');">
+		<h1>ZP-Team - my, czyli zespoł</h1>
+		<div style="margin-top: 100vh; width: 100%; background-color: white;">
+			<div style="height: 30px;"></div>
+
+
+			<div style="margin-left: auto; margin-right: auto; width: 70%; font-size: 20px;">
+				<div style="display: flex;">
+					<div>
+						<img height="300px" alt="zdj" src="/static/kajak.png">
+					</div>
+					<div style="padding: 10px; text-align: left;">
+						<h3>Jan Kalak</h3>
+						Obecnie uczeń technikum informatycznego. W wolnych chwilach słucha muzyki i czyta artykuły
+						naukowe.
+						Wielokrotnie nagradzany stypendium Burmistrza Krotoszyna.
+						UIubione przedmioty w szkole to fizyka i języki obce, a jego hobby to kosmos i motoryzacja.
+						W przyszłości chciałby pracować w przemyśle kosmicznym. Lubi zajmować się majsterkowaniem i
+						nauką.
+						Jego rola w projekcie polegała na programowaniu mikrokontrolerów i czujników.
+						<div style="display: none">
+							**Taki EasterEgg, bo za chwilę wielkanoc :)
+							**Po prostu musiałem to zostawić - Marcin Kryjom 23.03.2021r.
+							Patryk - zapalony naukowiec, programista 15k
+							W przyszłości chce zarabiac jak godny programista. Włada pythonem jak mało kto, ma ogromną
+							pasję i tak dalej.
+							Cokolwiek tu napisane by nie miało sensu. Ten napis jest tu dla zapchania przestrzeni i
+							czarnych dziur powstałych na skutek przeczytania tego bezsensownego tekstu.
+							Dlaczego więc to przecztałeś albo aś? Przez ciebie powstała kolejna czarna dziura, a nasza
+							galaktyka wokół jednej już krąży. Wiesz co będzie jak się takie dwie spotkają?
+							No właśnie. Nie wiesz!
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 40px; display: flex; margin-left: 30px; margin-right: -30px;">
+					<div>
+						<img height="300px" alt="zdj" src="/static/patrykos.png">
+					</div>
+					<div style="padding: 10px; text-align: left;">
+						<h3>Patryk Migaj</h3>
+						Jest obecnie uczniem klasy 2 technikum w zawodzie technik informatyk.<br>
+						Jego pasją jest historia (ulubiony okres historyczny 1900-1989), politologia, grafika ale przede
+						wszystkim jest to programowanie.
+						Używa języka Python a jego mocną stroną jest backendowe tworzenie strony jak i operacje na
+						bazach danych.
+						Aktualnie kształci się w kierunku Data Analitics, Data Science oraz w Machine Learning.
+						W wolnych chwilach czyta książki (aktualnie Orwell 1989), gra w strategie oraz ogląda filmy
+						historyczne.
+						W projekcie głównie zajmował się stworzeniem strony, bazą danych, bazą MQTT oraz strefą
+						graficzną.
+					</div>
+				</div>
+				<div style="margin-top: 40px; display: flex; margin-left: 60px; margin-right: -60px;">
+					<div>
+						<img height="300px" alt="zdj" src="/static/kryjomek.jpg">
+					</div>
+					<div style="padding: 10px; text-align: left;">
+						<h3>Marcin Kryjom</h3>
+						Kocha szkołę tak jak czytanie książek - ani jednej w życiu nie przeczytał.
+						<br>
+						Programuje aplikacje androidowe, komputerowe desktopowe jak i serwerowe głównie w javie.
+						Poza wiodącą javą jest obeznany w całym wachlarzu innych języków, bazach danych, strukturach
+						systemowych.
+						Stawia serwery szybciej niż koledzy włączają grę. W projekcie był odpowiedzialny głównie za
+						wygląd strony, jednak dzięki szerokiemu zakresowi wiedzy praktycznie angażwał się w każdą jego
+						strefę.
+
+					</div>
+				</div>
+				<div style="margin-top: 30px; margin-left: auto; margin-right: auto; height: 10px; width: 50vw; border-radius: 10px; background-color: black;"></div>
+				<h2>Opiekun projektu</h2>
+				<div style="margin-top: 40px; display: flex; margin-right: -60px;">
+					<div>
+						<img style="display: none;" height="300px" alt="zdj" src="/static/doktorek.png">
+						<img height="300px" alt="zdj" src="https://www.pwsz.konin.edu.pl/images/fotografia.jpg">
+
+					</div>
+					<div style="padding: 10px; text-align: left;">
+						<h3>dr Paweł Sobczak</h3>
+						Wykładowca i nauczyciel z pasji. Uczy w Zespole Szkół Technicznych w Ostrowie Wielkopolskim
+						oraz wykłada na Państwowej Wyszszej Szkole w Koninie. Nagrodzony tytułem Wielkoposlkiego
+						Nauczyciela Roku.
+						<br>
+						Motywuje zespół do pracy oraz rzuca pomysłami z rękawa niczym Anita Włodarczyk młotem.
+
+					</div>
+				</div>
+			</div>
+			<!--<div style="margin-top: 40px; background-color: white; opacity: 0.7;">
+                Patryk - zapalony naukowiec, programista 15k
+                <img alt="" style="margin-top: 5px;" height="40px" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif">
+                        <span style="font-size: 40px;">Loading...</span>
+            </div>-->
+			<div style="height: 30px;"></div>
+		</div>
+	</div>
+</div>
+{% endblock %}

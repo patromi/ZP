@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+	{% block links %}
+	<link rel="stylesheet" type="text/css" href="/static/login.css">
+	<title>Zautomatyzowane parkingi</title>
+	{% endblock %}
+	{% block content %}
+	<div id="login-container">
+        <h1>Zautomatyzowane parkingi</h1>
+        <hr width="112px" color="#d60d0d" style="margin-bottom: 25px;">
+        {{ wtf.quick_form(form) }}
+
+        <div>
+            <hr width="112px" color="#d60d0d" style="margin-bottom: 25px;">
+            <a href="#zapomnialemhasla" class="login-link">Zapomniałem hasła!</a>
+            <a href="{{ url_for('auth.login') }}" class="login-link">Mam już konto</a>
+        </div>
+    </div>
+			<!--<form action="#" method="post">
+
+
+				<div>
+					 {{ form.email(class="input", placeholder="Wprowadź email" ) }}
+				</div>
+				<div>
+
+
+					{{ form.password(class="input", placeholder="Wprowadź hasło", type="password" ) }}
+
+				</div>
+				<div>
+					{{ form.password2(class="input", placeholder="Wprowadź ponownie hasło", type="password") }}
+
+				</div>
+				<div>
+					{{ form.firstname(class="input", placeholder="Wprowadź imie", type="text") }}
+
+				</div>
+				<div>
+					{{ form.subname(class="input", placeholder="Wprowadź nazwisko", type="text") }}
+
+				</div>
+				<div>
+					{{ form.nrrej(class="input", placeholder="Wprowadź numer rejestracyjny", type="text") }}
+				</div>
+				<div>
+					{{ form.numberphone(class="input", placeholder="Wprowadź numer telefonu", type="text") }}
+				</div>
+				<div>
+					<label class="checkbox">
+						<input type="checkbox" name="rules" required>
+						<span>Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z postanowieniami <a href="/regulamin">regulaminu</a></span>
+					</label>
+				</div>
+				<div>
+					{{ form.submit(class="submit") }}
+				</div>
+			</form>
+		</div>
+	</div>-->
+
+	<!--<script type="text/javascript" src="js/debug.js"></script>
+	<script type="text/javascript">
+		function sleep(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		async function reload(){
+			await sleep(2000);
+			location.reload();
+		}
+		//reload();
+	</script> -->
+{% endblock %}

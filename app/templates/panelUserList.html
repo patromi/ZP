@@ -1,0 +1,63 @@
+{% extends "baseadmin.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="/static/global.css">
+<link rel="stylesheet" type="text/css" href="/static/admin.css">
+{% endblock %}
+{% block content %}
+<meta charset="UTF-8">
+<title>Zautomatyzowane parkingi</title>
+<body>
+<div id="container"></div>
+<div id="rest">
+    <h1 style="margin-left: 20px;">Lista parkingów</h1>
+    <div class="inside">
+        <div class="searcher">
+            <div style="display: inline-block;">
+                <form action="#" method="post">
+                    <input type="hidden" name="from"
+                           value="/aktualnylink/zeby/potem/cofac - uzyj w przycisku cofania">
+                    <input type="text" name="query" class="query-input" placeholder="Słowo klucz">
+                </form>
+            </div>
+            <div style="display: inline-block;">
+            </div>
+        </div>
+        <table id="parkinglist">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Numer rejestracji</th>
+                <th>Numer Telefonu</th>
+                <th>Rola</th>
+                <th>email</th>
+            </tr>
+            <tbody>
+            {% for person in people %}
+            <tr class="tabela">
+                <td>{{ person.id }}</td>
+                <td>{{ person.username }}</td>
+                <td>{{ person.subname }}</td>
+                <td>{{ person.numerphone }}</td>
+                <td>{{ person.nrrej }}</td>
+                <td>{{ person.role_id }}</td>
+                <td>{{ person.email }}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="/static/global.js"></script>
+<script type="text/javascript" src="/static/admin_user.js"></script>
+<script type="text/javascript" src="/static/debug.js"></script>
+
+</body>
+{% endblock %}

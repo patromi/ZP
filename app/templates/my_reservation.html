@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="/static/global.css">
+<link rel="stylesheet" type="text/css" href="/static/admin.css">
+{% endblock %}
+{% block content %}
+<table id="parkinglist">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nazwa Parkingu</th>
+        <th>Data Rezerwacji</th>
+        <th>Czas rozpoczęcia rezerwacji</th>
+        <th>Koniec rezerwacji</th>
+        <th>Status</th>
+    </tr>
+    <tbody>
+    {% for person in range(d) %}
+    <tr class="tabela">
+        <td>{{ person + 1}}</td>
+        <td>{{ lista[person] }}</td>
+        <td>{{ parking[person].date_reservation }}</td>
+        <td>{{ parking[person].start_time_reservation }}</td>
+        <td>{{ parking[person].end_time_reservation }}</td>
+        {% if parking[person].status == 0 %}
+        <td>
+            <a href="/reservation/opengate/{{ parking[person].parking_id }}">
+                <button class="button-add">Otwórz Barierkę
+                </button>
+            </a>
+        </td>
+        {% elif parking[person].status == 1 %}
+        <td>
+            <a href="/reservation/opengate/{{ parking[person].parking_id }}">
+                <button class="button-add">Wyjedź z parkingu
+                </button>
+            </a>
+        </td>
+        {% elif parking[person].status == 2 %}
+        <td>Rezerwacja zakończona</td>
+        {% endif %}
+        <td>
+            <a href="/reservation/deletereservation/{{ parking[person].id }}">
+                <button class="button-add" style="background-color: red;">Usuń Rezerwacje
+                </button>
+            </a>
+        </td>
+
+
+    </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

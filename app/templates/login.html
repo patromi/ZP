@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+
+    <link rel="stylesheet" type="text/css" href="/static/login.css">
+{% endblock %}
+{% block content %}
+		<div id="login-container">
+			<h1>Zautomatyzowane parkingi</h1><h4>Wstaw w tle jakieś głupie zdjęcia albo coś jako tło </h4>
+			<hr width="112px" color="#d60d0d" style="margin-bottom: 25px;">
+			{{ wtf.quick_form(form) }}
+			{% if wynik %}
+			<div><h2>Zły login lub hasło!</h2></div>
+    		{% else %}
+        		{{ super() }}
+    		{% endif %}
+			<div>
+				<hr width="112px" color="#d60d0d" style="margin-bottom: 25px;">
+				<a href="#zapomnialemhasla" class="login-link">Zapomniałem hasła!</a>
+				<a href="rejestracja" class="login-link">Nie mam konta</a>
+			</div>
+		</div>
+{% endblock %}
+

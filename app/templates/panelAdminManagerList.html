@@ -1,0 +1,63 @@
+{% extends "baseadmin.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+<meta charset="UTF-8">
+<title>Zautomatyzowane parkingi</title>
+<link rel="stylesheet" type="text/css" href="/static/global.css">
+<link rel="stylesheet" type="text/css" href="/static/admin.css">
+{% endblock %}
+{% block content %}
+</head>
+<body>
+<div id="container">
+    <div id="rest">
+        <h1 style="margin-left: 20px;">Lista zarządców</h1>
+        <div class="inside">
+            <div class="searcher">
+                <div style="display: inline-block;">
+                    <form action="#" method="post">
+                        <input type="hidden" name="from"
+                               value="/aktualnylink/zeby/potem/cofac - uzyj w przycisku cofania">
+                        <input type="text" name="query" class="query-input" placeholder="Słowo klucz">
+                    </form>
+                </div>
+                <div style="display: inline-block;">
+                    <a href="{{ url_for('admin.admin_create_parking_panel') }}">
+                        <button class="button-add">Mianuj zarządce
+                        </button>
+
+                    </a>
+                </div>
+            </div>
+            <table id="parkinglist">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Nazwisko</th>
+                    <th>nr telefonu</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for person in people %}
+                <tr class="tabela">
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.email }}</td>
+                    <td>{{ person.username }}</td>
+                    <td>{{ person.subname }}</td>
+                    <td>{{ person.numerphone }}</td>
+
+
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="/static/global.js"></script>
+<script type="text/javascript" src="/static/admin_manager.js"></script>
+<script type="text/javascript" src="/static/debug.js"></script>
+</body>
+{% endblock %}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Zautomatyzowane Parkingi - autonomiczne sieci sensoryczne</title>
+	<link rel="stylesheet" type="text/css" href="/static/global.css">
+	{% block links %}
+	{% endblock %}
+</head>
+<body>
+	<div id="container">
+		<nav class="topbar">
+			<a href="/" class="logo">
+				<img alt="LOGO" src="/static/logo.jpg">
+			</a>
+			<!-- <img alt="LOGO" src="img/logo.png" class="logo"> -->
+			<ul class="navdir navright">
+
+				{% if current_user.is_authenticated %}
+
+				<li style="position: relative">
+					<a href="{{ url_for('reservation.index') }}">Rezerwacja</a>
+					<a href="#" id="drop-swicher"><span> Witaj, {{ current_user.username }} </span></a>
+					<ul id="drop-menu" style="display: none;">
+						<li class="drop-li">
+                            <a href="{{ url_for('main.user', user=current_user.id) }}" class="lin-btn">Moje konto</a>
+                            <a href="{{ url_for('reservation.my_reservation') }}" class="lin-btn">Moje Rezerwacje</a>
+                            {% if current_user.is_administrator() %}
+                            <a href="/admin" class="lin-btn">Admin Panel</a>
+                            {% endif %}
+                            {% if current_user.is_Manager() %}
+                            <a href="{{ url_for('manager.parking_index') }}" class="lin-btn">Moje parkingi</a>
+                            {% endif %}
+
+                            <a href="{{ url_for('auth.logout') }}" class="lin-btn">Wyloguj</a>
+                        </li>
+					</ul>
+
+				{% else %}
+				<li>
+					<a href="{{ url_for('auth.login') }}">Zaloguj się</a>
+				</li>
+
+				<li>
+					<a href="{{ url_for('auth.register') }}">Zajerestruj się</a>
+				</li>
+				{% endif %}
+			</ul>
+		</nav>
+		<div class="content">
+				{% block content %}
+	            {% endblock %}
+		</div>
+
+        <div class="bottombar">
+			<div class="bottom-col">
+				<div style="position: relative;">
+					<img alt="LOGO" src="/static/logo.jpg" style="display: block; height: 150px; position: absolute; right: 0; bottom: 0; padding: 10px; transform: translate(50%, 0);">
+				</div>
+			</div>
+			<div class="bottom-col">
+				<span class="bottom-title">Szybkie linki</span>
+				<a href="#" class="def-link">Strona główna</a>
+				<a href="#" class="def-link">Moje konto</a>
+				<a href="#" class="def-link">Regulamin</a>
+				<a href="#" class="def-link">Płatności</a>
+				<a href="#" class="def-link">Postanowienia</a>
+				<a href="#" class="def-link">Terminy</a>
+			</div>
+			<div class="bottom-col">
+				<span class="bottom-title">Polityka prywatności</span>
+				<a href="#" class="def-link">Polityka reklam</a>
+				<a href="#" class="def-link">Konta</a>
+				<a href="#" class="def-link">RODO</a>
+				<a href="#" class="def-link">Co to pliki cookie?</a>
+				<a href="#" class="def-link">Wiki</a>
+				<a href="#" class="def-link">FAQ</a>
+			</div>
+			<div class="bottom-col">
+				<span class="bottom-title">Regulamin serwisu</span>
+				<a href="#" class="def-link">Regulamin w .pdf</a>
+				<a href="#" class="def-link">Regulamin (odnośnik)</a>
+				<a href="#" class="def-link">Regulamin (do druku)</a>
+				<span class="bottom-title">Inne pliki</span>
+				<a href="#" class="def-link">Załącznik nr 1</a>
+				<a href="#" class="def-link">Załącznik nr 2</a>
+			</div>
+			<div>
+				<span style="color: gray; letter-spacing: 1.5px;">&copy; Copyright 2020-2021 Zautomatyzowane Parkingi - wszelkie prawa zastrzeżone.</span>
+				<br>
+				<span style="color: gray; letter-spacing: 1.5px;">Wykonane przez <a href="naszasuperfirma" class="def-link">Kalak &amp; Kryjom &amp; Migaj</a></span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/static/global.js/"></script>
+</body>
+</html>

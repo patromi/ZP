@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="/static/global.css">
+<link rel="stylesheet" type="text/css" href="/static/admin.css">
+{% endblock %}
+{% block content %}
+<meta charset="UTF-8">
+<title>Zautomatyzowane parkingi</title>
+<body>
+<div id="container"></div>
+<div id="rest">
+    <h1 style="margin-left: 20px;">Lista parkingów</h1>
+    <div class="inside">
+        <div class="searcher">
+            <div style="display: inline-block;">
+                <form action="#" method="POST">
+                    <input type="hidden" name="from"
+                           value="/aktualnylink/zeby/potem/cofac - uzyj w przycisku cofania">
+                    <input type="text" name="query" class="query-input" placeholder="Słowo klucz">
+                </form>
+
+            </div>
+            {% if wynik %}
+            <a href="{{ url_for('reservation.index') }}">
+
+                <button class="button-add">Wyświelt wszystkie parkingi
+                </button>
+
+            </a>
+            {% else %}
+            {{ super() }}
+            {% endif %}
+        </div>
+        <table id="parkinglist">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Adres</th>
+                <th>Miejsca</th>
+                <th>Zajęte miejsca</th>
+                <th>Nazwa</th>
+                <th>Opis</th>
+            </tr>
+            <tbody>
+            {% for person in people %}
+            <tr class="tabela">
+                <td>{{ person.id }}</td>
+                <td>{{ person.adress }}</td>
+                <td>{{ person.number_of_parkings }}</td>
+                <td>{{ person.number_of_free_parkings }}</td>
+                <td>{{ person.name }}</td>
+                <td>{{ person.description }}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="/static/global.js"></script>
+<script type="text/javascript" src="/static/reservation.js"></script>
+<script type="text/javascript" src="/static/debug.js"></script>
+
+</body>
+{% endblock %}
