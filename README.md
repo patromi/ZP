@@ -2,16 +2,28 @@
 
 _**Szybkie uruchomienie**_
 
-Mając pobrane nasze repozytorium musimy określić zmienne środowiskowe. Aby to zrobić należy wpisać w naszym środowsku (dla systemu windows):
+Mając pobrane nasze repozytorium  musimy zainstalować wwszystkie potrzebne bilbioteki do tego wykorzystujemy komendę: 
+- pip install -r requiments.txt
 
-- _set FLASK_APP=sensopark.py_
+Następnie musimy określić zmienne środowiskowe
+Aby to zrobić należy wpisać w naszym środowsku (dla systemu windows):
+
+- _set FLASK_APP=zp.py_
 - _set SECRET_KEY=[SECRET KEY] // Podajmy tutaj nasz klucz który będzie szyfrować nam informacje_
 - _set MAIL_USERNAME=[GMAIL EMAIL]_ //Podajemy swój email na portalu gmail. Należy pamiętać aby pozwolić aplikacją na dostęp do konta
 - _set MAIL_PASSWORD=[GMAIL PASSWORD]_ // Podajemy hasło
 - _set SQL_IP=[SQL_IP]_ // Podajemy IP naszej bazy danych (Narazie tylko mysql)
 - _set SQL_DB=[SQL_DB]_ // Podajemy nazwe bazy danych na której bedziemy pracować
-- _set SQL_NAME=[SQL_NAME]_ // Podajemy nazwe naszej instancji
+- _set SQL_NAME=[SQL_NAME]_ // Podajemy nazwe naszego użytkownika
+- _set SQL_PASSWORD=[SQL_PASSWORD]_ // Podajemy hasło naszego użytkownika
+***Discraimer*** Jeżeli nasz użytkownik nie ma hasło wpisujemy _set SQL_NAME=[SQL_PASSWORD_MODE]_= 0
 - _set ADMIN=[ADMIN]_ // podajemy maila który po zarajestrowaniu będzie automatycznie administatorem
+***uruchomienie na localhoscie z użytkownikiem root bez hasło w db zp, powinno wyglądać nastepująco:***
+- set SQL_PASSWORD_MODE=1
+- set SQL_NAME=root 
+- set SQL_DB =zp
+- set SQL_IP=localhost
+
 
 Dla systemu Linux lub MacOS
 
@@ -21,6 +33,8 @@ Dla systemu Linux lub MacOS
 - _export  SQL_IP=[SQL_IP]_
 - _export  SQL_DB=[SQL_DB]_ 
 - _export  SQL_NAME=[SQL_NAME]_ 
+- _export SQL_NAME=[SQL_PASSWORD]_ // Podajemy hasło naszego użytkownika
+***Discraimer*** Jeżeli nasz użytkownik nie ma hasło wpisujemy _set SQL_NAME=[SQL_PASSWORD_MODE]_= 0
 - _export  ADMIN=[ADMIN]_ 
 
 ### **Wybór innej bazy danych niż mysql**
