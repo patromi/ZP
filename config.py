@@ -32,9 +32,10 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
     if Config.SQL_PASSWORD_MODE == 0:
-        SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{Config.SQL_NAME}:{Config.SQL_PASSWORD}@{Config.SQL_IP}/{Config.SQL_DB}"
-    else:
         SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{Config.SQL_NAME}:@{Config.SQL_IP}/{Config.SQL_DB}"
+    else:
+        SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{Config.SQL_NAME}:{Config.SQL_PASSWORD}@{Config.SQL_IP}/{Config.SQL_DB}"
+
 
 
 class TestingConfig(Config):
