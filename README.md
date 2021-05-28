@@ -58,7 +58,6 @@ SQLite (Windows) sqlite:///c:/bezwzględna/ścieżka/do/bazy_danych
 - __models.Stats.stats_setup()__
 
 
-**Disclaimer** Gdyby utworzyła się tylko jedna ranga należy skomentować pokolei Role administatora i wykonać funkcję jeszcze raz a potem zarządcy i tak samo
 ### Znaczenie ról w naszym systemie
 Administator
 - Ma dostęp do wszystkiego tj. Panelu administatora gdzie może zmieniać informacje użytkowników, parkingów, rezerwacji etc.
