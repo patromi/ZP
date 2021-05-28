@@ -19,7 +19,7 @@ Aby to zrobić należy wpisać w naszym środowsku (dla systemu windows):
 ***Discraimer*** Jeżeli nasz użytkownik nie ma hasło wpisujemy _set SQL_NAME=[SQL_PASSWORD_MODE]_= 0
 - _set ADMIN=[ADMIN]_ // podajemy maila który po zarajestrowaniu będzie automatycznie administatorem
 
-***uruchomienie na localhoscie z użytkownikiem root bez hasło w db zp, powinno wyglądać nastepująco:***
+***Uruchomienie na localhoscie z użytkownikiem root bez hasła w db zp, powinno wyglądać nastepująco:***
 - set SQL_PASSWORD_MODE=1
 - set SQL_NAME=root 
 - set SQL_DB =zp
