@@ -30,7 +30,7 @@ Dla systemu Linux lub MacOS
 
 - _export FLASK_APP=sensopark.py_
 - _export MAIL_USERNAME=[GMAIL EMAIL]_ 
-- _export  MAIL_PASSWORD=[GMAIL PASSWORD] _
+- _export  MAIL_PASSWORD=[GMAIL PASSWORD]_
 - _export  SQL_IP=[SQL_IP]_
 - _export  SQL_DB=[SQL_DB]_ 
 - _export  SQL_NAME=[SQL_NAME]_ 
