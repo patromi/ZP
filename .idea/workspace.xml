@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94bd5517-bcb4-49c5-8017-a5562a8acb43" name="Default Changelist" comment="zp">
+      <change afterPath="$PROJECT_DIR$/.idea/SensoPark.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/admin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/admin/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/admin/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/alcorythm/alcorythm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/mail.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/decorators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main/apies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/manager/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/manager/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/reservation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/reservation/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/reservation/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/admin_manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/admin_user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/kajak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/kryjomek.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/parkingos.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/patrykos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/reservation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/reservation_fuction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/team.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/504.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/Panel_admin_one_manger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/Panel_admin_one_parking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/Panel_manager_one_parking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/User_panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/badlogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/baseadmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/confirmed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/create_parking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/mail.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/my_reservation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panelAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panelAdminManagerList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panelAdminParkingList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panelUserKalendarz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panelUserList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panel_Reservation_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/panel_manager_own_parkings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/sukceslogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/unconfirmed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/f698b8585896_wstępna_migration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nucleo/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nucleo/printf.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/css/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/cur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/doktorek.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/kajak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/kryjomek.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/parkingos.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/patrykos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/img/team.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/indexLoged.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/js/debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/js/global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/panelAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/panelAdminParking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/panelAdminParkingList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/panelManagerList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/panelUserKalendarz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/parking_reservation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/css/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/indexLoged.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/js/debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/js/global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/panelAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page2/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rzeczy do zrobienia.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_basics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testauth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zp.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1qzcJ1ONFbbXwMaxuY5VtjU8gbp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Python" type="PythonConfigurationType" factoryName="Python">
+      <module name="SensoPark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\PycharmProjects\SensoPark\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\admin\PycharmProjects\SensoPark\zp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94bd5517-bcb4-49c5-8017-a5562a8acb43" name="Default Changelist" comment="" />
+      <created>1618085783597</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618085783597</updated>
+    </task>
+    <task id="LOCAL-00001" summary="zp">
+      <created>1622146657256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622146657256</updated>
+    </task>
+    <task id="LOCAL-00002" summary="zp">
+      <created>1622208806053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622208806053</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zp" />
+    <option name="LAST_COMMIT_MESSAGE" value="zp" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/admin/views.py</url>
+          <line>182</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/admin/views.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
