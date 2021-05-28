@@ -23,6 +23,7 @@ class Config:
     SQL_IP = os.environ.get('SQL_IP')
     SQL_DB = os.environ.get('SQL_DB')
     SQL_NAME = os.environ.get('SQL_NAME')
+    SQL_PASSWORD_MODE= os.environ.get('SQL_PASSWORD_MODE')
     @staticmethod
     def init_app(app):
         pass
@@ -30,8 +31,10 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-
-    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{Config.SQL_NAME}:{Config.SQL_PASSWORD}@{Config.SQL_IP}/{Config.SQL_DB}'
+    if Config.SQL_PASSWORD_MODE == 0:
+        SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{Config.SQL_NAME}:{Config.SQL_PASSWORD}@{Config.SQL_IP}/{Config.SQL_DB}"
+    else:
+        SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{Config.SQL_NAME}:@{Config.SQL_IP}/{Config.SQL_DB}"
 
 
 class TestingConfig(Config):
@@ -42,7 +45,13 @@ class TestingConfig(Config):
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{Config.SQL_NAME}:{Config.SQL_PASSWORD}@{Config.SQL_IP}/{Config.SQL_DB}'
 
-
+def test():
+    print(Config.SQL_NAME)
+    print(type(Config.SQL_PASSWORD))
+    print(Config.SQL_IP)
+    print(Config.SQL_DB)
+    print(DevelopmentConfig.SQLALCHEMY_DATABASE_URI)
+    print(DevelopmentConfig.SQLALCHEMY_DATABASE_URI2)
 config = {
     'development': DevelopmentConfig,
     'testing': TestingConfig,
