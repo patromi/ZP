@@ -31,7 +31,10 @@ def create_app(config_name):
     migrate = Migrate(app, db)
     toolbar = DebugToolbarExtension(app)
     app.config['SECRET_KEY'] = 'jeabcpis'
-    app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+    app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = True
+    app.config['TESTING'] = True
+    app.config['DEBUG'] = True
+
     login_manager.init_app(app)
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
